@@ -7,7 +7,6 @@
             width="1920"
             height="700"
             class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-0"
-            style="pointer-events: none;"
         >
     </picture>
 

@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         new Glider(slider, {
             slidesToShow: 3,
             slidesToScroll: 1,
-            draggable: true,
-            scrollLock: true,
+            scrollLock: false,
             arrows: {
                 prev: '.glider-prev',
                 next: '.glider-next'
@@ -58,6 +57,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 backgroundSection.classList.remove('z-2');
                 backgroundSection.classList.add('z-3');
             }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Lightbox logica
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    document.querySelectorAll('.slider-thumb').forEach(img => {
+        img.addEventListener('click', () => {
+            const fullImg = img.getAttribute('data-full');
+            lightboxImg.src = fullImg;
+            lightbox.classList.remove('hidden');
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.add('hidden');
+        lightboxImg.src = '';
+    });
+
+    // Optioneel: sluiten op achtergrondklik
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.add('hidden');
+            lightboxImg.src = '';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const glider = document.querySelector('.glider');
+
+    if (glider) {
+        glider.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            glider.scrollLeft += e.deltaY;
         });
     }
 });
