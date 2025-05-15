@@ -1,4 +1,8 @@
-<div class="jungle-box d-flex flex-column flex-md-row align-items-stretch overflow-hidden rounded shadow">
+@php
+    $extraClasses = (!request()->is('/') && !request()->is('home')) ? '' : '';
+@endphp
+
+<div class="jungle-box d-flex flex-column flex-md-row align-items-stretch overflow-hidden rounded shadow {{ $extraClasses }}">
     <div class="image-container w-100 w-md-50 position-relative">
         <picture>
             <source srcset="{{ asset('images/footer-image.webp') }}" type="image/webp">

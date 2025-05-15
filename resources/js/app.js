@@ -41,25 +41,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('hamburgerToggle');
     const menu = document.getElementById('navMenu');
     const backgroundSection = document.getElementById('backgroundSection');
+    const jungleBox = document.querySelector('.jungle-box');
 
-    if (toggleBtn && menu && backgroundSection) {
+    if (toggleBtn && menu) {
         toggleBtn.addEventListener('click', function () {
             const isOpen = menu.classList.toggle('show');
 
-            // Wissel tussen z-3 en z-2 via classList
-            backgroundSection.classList.remove(isOpen ? 'z-3' : 'z-2');
-            backgroundSection.classList.add(isOpen ? 'z-2' : 'z-3');
+            [backgroundSection, jungleBox].forEach(el => {
+                if (el) {
+                    el.classList.remove(isOpen ? 'z-3' : 'z-2');
+                    el.classList.add(isOpen ? 'z-2' : 'z-3');
+                }
+            });
         });
 
         document.addEventListener('click', function (e) {
             if (e.target?.id === 'menuClose' || (e.target.tagName === 'A' && menu.classList.contains('show'))) {
                 menu.classList.remove('show');
-                backgroundSection.classList.remove('z-2');
-                backgroundSection.classList.add('z-3');
+
+                [backgroundSection, jungleBox].forEach(el => {
+                    if (el) {
+                        el.classList.remove('z-2');
+                        el.classList.add('z-3');
+                    }
+                });
             }
         });
     }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Lightbox logica

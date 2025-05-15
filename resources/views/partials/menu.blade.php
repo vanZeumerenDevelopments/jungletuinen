@@ -1,4 +1,4 @@
-<nav class="position-fixed top-0 start-0 w-100 px-4 px-md-5 z-1000" style="height: 160px;">
+<nav class="position-absolute top-0 start-0 w-100 px-4 px-md-5 z-1000" style="height: 160px;">
     <div class="position-relative h-100 d-flex align-items-center justify-content-between menu-padding px-md-4">
         <!-- Logo -->
         <a href="/" class="d-block">
