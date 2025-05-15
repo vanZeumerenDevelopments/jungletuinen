@@ -19,6 +19,7 @@
 
     <!-- Canonical -->
     <link rel="canonical" href="{{ url()->current() }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="icon" href="{{ asset('favicons/favicon.ico') }}" type="image/x-icon">
 
     <link rel="prefetch" href="/eigen-jungletuin">

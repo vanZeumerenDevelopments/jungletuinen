@@ -15,19 +15,55 @@
         </picture>
     </div>
     <div class="content-container p-5 d-flex flex-column justify-content-center w-100 w-md-50">
-        <h2 class="mb-3" style="font-family: 'Georgia', serif;">Journey into the very heart of the jungle</h2>
+        @isset($title)
+            <h2 class="mb-3" style="font-family: 'Georgia', serif;">
+                {{ $title }}
+            </h2>
+        @endisset
+        @isset($description1)
         <p class="mb-3">
-            At TrekTribe, we are passionate about providing exhilarating jungle expeditions that unveil the wonders of ancient ruins and breathtaking waterfalls.
-            With our expert guides and immersive experiences, we invite you to embark on a remarkable journey through the untamed heart of the jungle.
+           {{ $description1 }}
         </p>
+        @endisset
+        @isset($description2)
         <p class="mb-4">
-            Our expeditions are meticulously crafted to blend adventure, education, and awe-inspiring natural beauty.
-            Prepare to be captivated as we lead you through dense rainforests and unveil the secrets of ancient civilizations.
-            Witness the magnificent ruins that stand as a testament to the past.
+            {{ $description2 }}
         </p>
-        <div>
-            <a href="#" class="btn btn-success px-4 py-2 rounded-pill">BOOK TODAY</a>
-        </div>
+        @endisset
+
+        @if(isset($contactPhone) || isset($contactEmail))
+            <div class="mt-3">
+                <h5 class="mb-2">Onze gegevens</h5>
+                @isset($contactPhone)
+                    <p class="mb-1">Telefoonnummer: <a href="tel:{{ $contactPhone }}">{{ $contactPhone }}</a></p>
+                @endisset
+                @isset($contactEmail)
+                    <p class="mb-1">E-mail: <a href="mailto:{{ $contactEmail }}">{{ $contactEmail }}</a></p>
+                @endisset
+            </div>
+        @endif
+
+        @if(isset($buttonUrl) && isset($buttonText))
+            <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+                <a href="{{ $buttonUrl }}" class="btn btn-success btn-lg rounded-pill py-2 px-4">
+                    {{ $buttonText }}
+                </a>
+
+                <div class="d-flex gap-2">
+                    @isset($buttonFacebook)
+                        <a href="{{ $buttonFacebook }}" target="_blank" rel="noopener" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    @endisset
+
+                    @isset($buttonInstagram)
+                        <a href="{{ $buttonInstagram }}" target="_blank" rel="noopener" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    @endisset
+                </div>
+            </div>
+        @endif
     </div>
 </div>
 
