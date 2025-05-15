@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.glider');
     if (slider) {
         new Glider(slider, {
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
             scrollLock: false,
             arrows: {
@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.lightbox-close');
 
     document.querySelectorAll('.slider-thumb').forEach(img => {
-        img.addEventListener('click', () => {
-            const fullImg = img.getAttribute('data-full');
+        img.addEventListener('click', (e) => {
+            const fullImg = e.currentTarget.getAttribute('data-full');
             lightboxImg.src = fullImg;
             lightbox.classList.remove('hidden');
         });
