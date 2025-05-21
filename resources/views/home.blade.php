@@ -19,5 +19,7 @@
         'description2' => 'Of je nu een kleine stadstuin hebt of een ruime achtertuin, met onze expertise en voorbeelden maak je eenvoudig een groene plek waar je elke dag opnieuw kunt genieten van natuur, rust en schoonheid. Neem contact op voor persoonlijk advies of blader door onze ideeënpagina’s.',
         'buttonUrl' => '/contact',
         'buttonText' => 'Contact Ons',
+        'buttonFacebook' => 'https://www.facebook.com/jungletuinen',
+        'buttonInstagram' => 'https://www.instagram.com/jungletuinen',
     ])
 @endsection

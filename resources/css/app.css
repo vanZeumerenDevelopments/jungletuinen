@@ -16,8 +16,8 @@ a, .btn {
     color: #CBBFA2;
 }
 
-body {
-    min-height: 100vh;
+.btn#hamburgerToggle, .btn#menuClose {
+    font-size: 4vh !important;
 }
 
 main {
@@ -84,8 +84,8 @@ main {
 
 .hero-overlay {
     position: relative;
+    padding-top: 20% !important;
     z-index: 3;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -170,7 +170,6 @@ footer {
 .hero-banner,
 .hero-leaves,
 .hero-footer {
-    height: 100vh; /* pas dit eventueel aan per section */
     position: relative;
     overflow: hidden;
 }
@@ -178,10 +177,6 @@ footer {
 .object-fit-cover {
     object-fit: contain;
     background-color: #000; /* optioneel: voor zwarte randen */
-}
-
-.slider-wrapper .glider {
-    gap: 1rem;
 }
 
 .slider-wrapper img {
@@ -324,8 +319,12 @@ footer {
         top: 0px;
     }
 
+    .hero-banner {
+        height: 135vh !important;
+    }
+
     .jungle-box {
-        margin-top: -60px;
+        margin-top: -300px;
     }
 }
 

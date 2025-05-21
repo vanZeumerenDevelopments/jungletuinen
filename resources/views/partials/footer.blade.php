@@ -48,20 +48,6 @@
                 <a href="{{ $buttonUrl }}" class="btn btn-success btn-lg rounded-pill py-2 px-4">
                     {{ $buttonText }}
                 </a>
-
-                <div class="d-flex gap-2">
-                    @isset($buttonFacebook)
-                        <a href="{{ $buttonFacebook }}" target="_blank" rel="noopener" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                            <i class="bi bi-facebook"></i>
-                        </a>
-                    @endisset
-
-                    @isset($buttonInstagram)
-                        <a href="{{ $buttonInstagram }}" target="_blank" rel="noopener" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                    @endisset
-                </div>
             </div>
         @endif
     </div>
@@ -70,5 +56,25 @@
 
 
 <footer class="text-center py-3">
-    &copy; {{ date('Y') }} Jungletuin voor thuis
+    <div class="footer-inner d-flex flex-column align-items-center gap-3">
+        <div>&copy; {{ date('Y') }} Jungletuin voor thuis</div>
+
+        <div class="d-flex gap-2">
+            @isset($buttonFacebook)
+                <a href="{{ $buttonFacebook }}" target="_blank" rel="noopener"
+                   class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
+                   style="width: 40px; height: 40px;">
+                    <i class="bi bi-facebook"></i>
+                </a>
+            @endisset
+
+            @isset($buttonInstagram)
+                <a href="{{ $buttonInstagram }}" target="_blank" rel="noopener"
+                   class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
+                   style="width: 40px; height: 40px;">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            @endisset
+        </div>
+    </div>
 </footer>

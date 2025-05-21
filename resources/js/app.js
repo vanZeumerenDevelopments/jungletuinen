@@ -8,28 +8,39 @@ document.addEventListener('DOMContentLoaded', () => {
         new Glider(slider, {
             slidesToShow: 1,
             slidesToScroll: 1,
-            scrollLock: false,
+            scrollLock: true,
             arrows: {
                 prev: '.glider-prev',
                 next: '.glider-next'
             },
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 576, // kleine telefoons
                     settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1.2,
+                        slidesToScroll: 1,
+                        scrollLock: true
                     }
                 },
                 {
-                    breakpoint: 992,
+                    breakpoint: 768, // tablets
                     settings: {
-                        slidesToShow: 2
+                        slidesToShow: 2,
+                        slidesToScroll: 1
                     }
                 },
                 {
-                    breakpoint: 1200,
+                    breakpoint: 992, // laptops
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1200, // desktops
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
                     }
                 }
             ]

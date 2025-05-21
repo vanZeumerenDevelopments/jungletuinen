@@ -19,5 +19,7 @@
         'description2' => 'Laat je inspireren door de natuur. Gebruik hoogteverschillen, schaduwrijke hoeken en weelderige beplanting om een mysterieuze sfeer te creëren. Met de juiste tips en een creatief plan tover jij elke tuin om tot een groene jungle vol leven.',
         'buttonUrl' => '/contact',
         'buttonText' => 'Vraag ons om advies',
+        'buttonFacebook' => 'https://www.facebook.com/jungletuinen',
+        'buttonInstagram' => 'https://www.instagram.com/jungletuinen',
     ])
 @endsection

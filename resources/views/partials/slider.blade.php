@@ -8,8 +8,7 @@
                         src="{{ asset("images/slider/slider{$i}.jpg") }}"
                         data-full="{{ asset("images/slider/slider{$i}.jpg") }}"
                         class="slider-thumb"
-                        alt="Jungletuin {{ $i }}"
-                        width="800" height="500" loading="lazy">
+                        alt="Jungletuin {{ $i }}" loading="lazy">
                 </picture>
             @endforeach
         </div>
