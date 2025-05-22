@@ -1,16 +1,10 @@
+{{-- Lightbox overlay --}}
+<div id="lightbox" class="lightbox hidden">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Vergrote afbeelding">
+</div>
+
 <section class="hero-banner position-relative overflow-hidden">
-    <picture>
-        <source srcset="{{ asset('images/nature.webp') }}" type="image/webp">
-        <img
-            src="{{ asset('images/nature.jpg') }}"
-            alt="Jungle tuin achtergrond"
-            width="1920"
-            height="900"
-            class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-2"
-            loading="eager"
-            fetchpriority="high"
-        >
-    </picture>
     <div class="hero-overlay d-flex flex-column justify-content-center align-items-start text-start">
         @include('partials.menu')
 
@@ -40,4 +34,17 @@
             @endif
         </div>
     </div>
+
+    <picture>
+        <source srcset="{{ asset('images/nature.webp') }}" type="image/webp">
+        <img
+            src="{{ asset('images/nature.jpg') }}"
+            alt="Jungle tuin achtergrond"
+            width="1920"
+            height="900"
+            class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-1"
+            loading="eager"
+            fetchpriority="high"
+        >
+    </picture>
 </section>

@@ -45,7 +45,7 @@
 
         @if(isset($buttonUrl) && isset($buttonText))
             <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-                <a href="{{ $buttonUrl }}" class="btn btn-success btn-lg rounded-pill py-2 px-4">
+                <a href="{{ $buttonUrl }}" class="btn btn-success btn-color btn-lg rounded-pill py-2 px-4">
                     {{ $buttonText }}
                 </a>
             </div>
@@ -61,7 +61,7 @@
 
         <div class="d-flex gap-2">
             @isset($buttonFacebook)
-                <a href="{{ $buttonFacebook }}" target="_blank" rel="noopener"
+                <a href="{{ $buttonFacebook }}" target="_blank" rel="noopener" aria-label="Facebook"
                    class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
                    style="width: 40px; height: 40px;">
                     <i class="bi bi-facebook"></i>
@@ -69,7 +69,7 @@
             @endisset
 
             @isset($buttonInstagram)
-                <a href="{{ $buttonInstagram }}" target="_blank" rel="noopener"
+                <a href="{{ $buttonInstagram }}" target="_blank" rel="noopener" aria-label="Instagram"
                    class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
                    style="width: 40px; height: 40px;">
                     <i class="bi bi-instagram"></i>

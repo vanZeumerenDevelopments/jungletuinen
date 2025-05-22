@@ -14,9 +14,3 @@
         </div>
     </div>
 </div>
-
-{{-- Lightbox overlay --}}
-<div id="lightbox" class="lightbox hidden">
-    <span class="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="Vergrote afbeelding">
-</div>
